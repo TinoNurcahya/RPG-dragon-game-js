@@ -1,6 +1,6 @@
 # 🐉 RPG - The Legend of Dragon (Dragon Repeller) - Premium Edition
 
-[![Website Link](https://img.shields.io/badge/Play%20Game-Live%20Demo-brightgreen?style=for-the-badge&logo=google-chrome&logoColor=white)](https://tinonurcahya.github.io/RPG-dragon/)
+[![Website Link](https://img.shields.io/badge/Play%20Game-Live%20Demo-brightgreen?style=for-the-badge&logo=google-chrome&logoColor=white)](https://tinonurcahya.github.io/RPG-dragon-game-js/)
 
 **Dragon Repeller Premium Edition** adalah game RPG petualangan teks berbasis web klasik yang telah dirombak secara total untuk menghadirkan antarmuka visual kelas dunia (*premium aesthetics*), umpan balik visual yang interaktif, serta efek suara dinamis langsung di browser Anda.
 
@@ -62,7 +62,6 @@ Efek audio 8-bit berkualitas tinggi yang disintesis secara real-time langsung me
 * 💀 **Sad Low Sweep**: Efek dengung nada turun yang dramatis saat karakter mati.
 
 ---
-
 ## 🎮 Cara Bermain
 
 1. **Town Square (Alun-Alun Kota)**: Titik awal perjalanan Anda. Dari sini Anda bisa pergi berbelanja di toko (*Store*), menjelajahi gua monster (*Cave*), atau langsung menantang Naga (*Dragon*).
@@ -86,7 +85,7 @@ Efek audio 8-bit berkualitas tinggi yang disintesis secara real-time langsung me
 ## 🔗 Live Demo
 
 Rasakan petualangan fantasi epik ini secara langsung melalui tautan berikut:
-👉 **[Mainkan Dragon Repeller Premium Edition](https://tinonurcahya.github.io/RPG-dragon/)**
+👉 **[Mainkan Dragon Repeller Premium Edition](https://tinonurcahya.github.io/RPG-dragon-game-js/)**
 
 ---
 
