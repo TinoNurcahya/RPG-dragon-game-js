@@ -8,37 +8,96 @@
       rel="shortcut icon"
       href="https://img.freepik.com/premium-vector/adorable-youngster-with-dragon-outfit_704913-64.jpg"
       type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <title>RPG - The Legend of Dragon</title>
   </head>
   <body>
-    <div id="game">
-      <div id="stats">
-        <span class="stat"
-          >XP: <strong><span id="xpText">0</span></strong></span
-        >
-        <span class="stat"
-          >Health: <strong><span id="healthText">100</span></strong></span
-        >
-        <span class="stat"
-          >Gold: <strong><span id="goldText">50</span></strong></span
-        >
+    <div id="background-glow"></div>
+    <div id="game-container">
+
+      <!-- Language Selector -->
+      <div id="lang-selector">
+        <button class="lang-btn active" id="lang-en" onclick="setLanguage('en')" title="English">
+          🇬🇧 EN
+        </button>
+        <button class="lang-btn" id="lang-id" onclick="setLanguage('id')" title="Bahasa Indonesia">
+          🇮🇩 ID
+        </button>
+        <button class="lang-btn" id="lang-jp" onclick="setLanguage('jp')" title="日本語">
+          🇯🇵 JP
+        </button>
       </div>
-      <div id="controls">
-        <button id="button1">Go to store</button>
-        <button id="button2">Go to cave</button>
-        <button id="button3">Fight dragon</button>
-      </div>
-      <div id="monsterStats">
-        <span class="stat"
-          >Monster Name: <strong><span id="monsterName"></span></strong
-        ></span>
-        <span class="stat"
-          >Health: <strong><span id="monsterHealth"></span></strong
-        ></span>
-      </div>
-      <div id="text">
-        Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the
-        town. You are in the town square. Where do you want to go? Use the buttons above.
+
+      <h1 id="gameTitle">Dragon Repeller</h1>
+      
+      <div id="game">
+        <div id="particles-container"></div>
+        
+        <div id="game-viewport">
+          <img id="viewport-artwork" src="assets/town_square.png" alt="Fantasy Landscape">
+        </div>
+        
+        <div class="character-profile">
+          <div class="avatar-ring">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="character-info">
+            <span class="character-title" id="playerTitle">Dragon Slayer</span>
+            <span class="character-level">LVL <span id="playerLvl">1</span></span>
+          </div>
+        </div>
+
+        <div id="stats">
+          <div class="stat-card" id="stat-xp">
+            <span class="stat-label"><i class="fa-solid fa-star"></i> <span data-i18n="xp">XP</span></span>
+            <strong class="stat-value"><span id="xpText">0</span></strong>
+          </div>
+          
+          <div class="stat-card" id="stat-health">
+            <div class="stat-header">
+              <span class="stat-label"><i class="fa-solid fa-heart"></i> <span data-i18n="health">Health</span></span>
+              <strong class="stat-value"><span id="healthText">100</span></strong>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div id="healthBar" class="progress-bar" style="width: 100%;"></div>
+            </div>
+          </div>
+          
+          <div class="stat-card" id="stat-gold">
+            <span class="stat-label"><i class="fa-solid fa-coins"></i> <span data-i18n="gold">Gold</span></span>
+            <strong class="stat-value"><span id="goldText">50</span></strong>
+          </div>
+        </div>
+
+        <div id="monsterStats">
+          <div class="monster-header">
+            <span class="monster-label"><i class="fa-solid fa-skull"></i> <span id="monsterName"></span></span>
+            <strong class="monster-value"><span id="monsterHealth"></span> HP</strong>
+          </div>
+          <div class="progress-bar-wrapper monster">
+            <div id="monsterHealthBar" class="progress-bar" style="width: 100%;"></div>
+          </div>
+        </div>
+
+        <div id="text-container">
+          <div id="text"></div>
+        </div>
+
+        <div id="inventoryContainer">
+          <span class="inventory-title"><i class="fa-solid fa-briefcase"></i> <span data-i18n="inventory">Inventory</span>:</span>
+          <div id="inventoryList">
+            <span class="inventory-item active">stick</span>
+          </div>
+        </div>
+
+        <div id="controls">
+          <button id="button1">Go to store</button>
+          <button id="button2">Go to cave</button>
+          <button id="button3">Fight dragon</button>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
