@@ -536,4 +536,85 @@ button:focus {
 
 .lang-btn:focus {
   box-shadow: 0 0 0 2px rgba(255, 184, 48, 0.3);
+}
+
+/* Responsive Mobile Layouts */
+@media (max-width: 480px) {
+  #game-container {
+    padding: 10px;
+  }
+
+  #gameTitle {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  #game {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  #game-viewport {
+    height: 150px;
+  }
+
+  /* Stats Responsive Layout */
+  #stats {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 8px 12px;
+  }
+
+  .stat-value {
+    font-size: 1rem;
+  }
+
+  /* Character profile vertical stack on tiny mobile */
+  .character-profile {
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  .avatar-ring {
+    width: 36px;
+    height: 36px;
+  }
+
+  .avatar-ring i {
+    font-size: 0.95rem;
+  }
+
+  .character-title {
+    font-size: 0.95rem;
+  }
+  
+  /* Buttons padding adjustment */
+  button {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  #lang-selector {
+    gap: 4px;
+  }
+
+  .lang-btn {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  #gameTitle {
+    font-size: 1.5rem;
+  }
+  
+  /* Compact list items */
+  .inventory-item {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
 }
